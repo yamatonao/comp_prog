@@ -1,3 +1,4 @@
+
 // C
 #ifndef _GLIBCXX_NO_ASSERT
 #include <cassert>
@@ -17,17 +18,18 @@
 #include <cstdlib>
 #include <cstring>
 #include <ctime>
+#include <cwchar>
+#include <cwctype>
 
 #if __cplusplus >= 201103L
 #include <ccomplex>
 #include <cfenv>
 #include <cinttypes>
-// #include <cstdalign>
+#include <cstdalign>
 #include <cstdbool>
 #include <cstdint>
 #include <ctgmath>
-#include <cwchar>
-#include <cwctype>
+#include <cuchar>
 #endif
 
 // C++
@@ -66,25 +68,60 @@
 
 #if __cplusplus >= 201103L
 #include <array>
-#include <atomic>
-#include <chrono>
-#include <condition_variable>
-#include <forward_list>
-#include <future>
-#include <initializer_list>
-#include <mutex>
-#include <random>
-#include <ratio>
-#include <regex>
-#include <scoped_allocator>
-#include <system_error>
-#include <thread>
-#include <tuple>
-#include <typeindex>
-#include <type_traits>
-#include <unordered_map>
-#include <unordered_set>
-#endif
+ #include <atomic>
+ #include <chrono>
+ #include <codecvt>
+ #include <condition_variable>
+ #include <forward_list>
+ #include <future>
+ #include <initializer_list>
+ #include <mutex>
+ #include <random>
+ #include <ratio>
+ #include <regex>
+ #include <scoped_allocator>
+ #include <system_error>
+ #include <thread>
+ #include <tuple>
+ #include <typeindex>
+ #include <type_traits>
+ #include <unordered_map>
+ #include <unordered_set>
+ #endif
+ 
+ #if __cplusplus >= 201402L
+ #include <shared_mutex>
+ #endif
+ 
+ #if __cplusplus >= 201703L
+ #include <any>
+ #include <charconv>
+ // #include <execution>
+ #include <filesystem>
+ #include <optional>
+ #include <memory_resource>
+ #include <string_view>
+ #include <variant>
+ #endif
+ 
+ #if __cplusplus > 201703L
+ #include <barrier>
+ #include <bit>
+ #include <compare>
+ #include <concepts>
+ #if __cpp_impl_coroutine
+ # include <coroutine>
+ #endif
+ #include <latch>
+ #include <numbers>
+ #include <ranges>
+ #include <span>
+ #include <stop_token>
+ #include <semaphore>
+ #include <source_location>
+ #include <syncstream>
+ #include <version>
+ #endif
 
 using namespace std;
 typedef long long int ll;
@@ -92,5 +129,5 @@ typedef long long int ll;
  int main(void){
     cout << "hello world!" << endl;
 
-     return 1;
+     return 0;
  }
